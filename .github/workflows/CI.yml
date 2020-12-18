@@ -1,5 +1,10 @@
 name: Build Docker image and deploy to Heroku
-on: [push]
+on:
+  # Trigger the workflow on push or pull request,
+  # but only for the main branch
+  push:
+    branches:
+      - master
 jobs:
   build:
     runs-on: ubuntu-latest
